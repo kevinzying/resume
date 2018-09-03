@@ -71,10 +71,27 @@ p.lead {
 }
 
 .dev-icons {
-  font-size: 3rem;
-  .list-inline-item i {
+  font-size: 2rem;
+}
+
+.dev-icons-small {
+  font-size: 1.5rem;
+}
+
+.dev-icons, .dev-icons-small{
+  .list-inline-item {
     &:hover {
       color: $primary;
     }
   }
+  
+  .list-no-bullet {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.list-no-bullet {
+  list-style: none;
 }

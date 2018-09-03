@@ -76,11 +76,23 @@ p.lead {
 }
 
 .dev-icons {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
-.dev-icons .list-inline-item i:hover {
+.dev-icons-small {
+  font-size: 1.5rem;
+}
+
+.dev-icons .list-inline-item:hover, .dev-icons-small .list-inline-item:hover {
   color: #BD5D38;
+}
+
+.dev-icons .list-no-bullet:hover, .dev-icons-small .list-no-bullet:hover {
+  color: #BD5D38;
+}
+
+.list-no-bullet {
+  list-style: none;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
