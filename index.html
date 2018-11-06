@@ -43,6 +43,9 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
@@ -68,7 +71,11 @@
           <div class="subheading mb-5">Cornell University · Ithaca, NY 14850 · (240) 812-9538 ·
             <a href="mailto:kzy2@cornell.edu">kzy2@cornell.edu</a>
           </div>
-          <p class="lead mb-5">I am a junior at Cornell University pursuing a Bachelor of Science in electrical and computer engineering with minors in computer science and the Dyson business minor for engineers. I am currently looking for positions for the summer of 2019 utilizing my skills in firmware engineering and/or hardware design.</p>
+          <p class="lead mb-3">I am a junior at Cornell University pursuing a Bachelor of Science in electrical and computer engineering 
+		  with minors in computer science and business. I am currently looking for positions for the summer of 2019 utilizing my skills 
+		  in embedded systems and/or electrical hardware design.</p>
+		  <p class="lead mb-5">Feel free to contact me at my email address above or on 
+		  LinkedIn for more information about any of my projects or experiences.</p>
           <!--<p class="lead mb-5">Test</p> -->
           <div class="social-icons">
             <a href="Kevin_Ying_Resume.pdf">
@@ -84,6 +91,102 @@
             </a>
           </div>
         </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Recent Projects</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Autonomous Maze-Exploring Robot</h3>
+              <div class="subheading mb-3">ECE 3400</div>
+              <p>I am currently working in a team of four to design and build a robot that is fully autonomous and capable of line following, 
+              wall-following, tone detection, and IR detection and avoidance of other robots. In addition, the robot is able to 
+              communicate with a base station using an RF transceiver to display the maze state to a display as we map it. 
+              We're currently working on adding tree-search exploration algorithms and integrating a camera and FPGA to detect 
+              visual treasures. Our robots were built with an Arduino Uno, a DE0-nano FPGA, custom 3D-printed components, 
+              and various sensors and servos.
+              </p>
+			  <p>To see more, take a look at our <a href="https://ece3400team28.github.io/website/">project page</a>.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Fall 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">TFT Display Ball Video Game</h3>
+              <div class="subheading mb-3">ECE 4760</div>
+              <p>A group of three implemented a video game in which a player controls a paddle which moves back and forth 
+			  across the bottom of the screen, attempting to catch balls with the paddle in order to prevent balls from 
+			  reaching the bottom of the screen. The goal was to be able to animate as many balls simultaneously as possible, 
+			  while modeling all of the collisions between balls and walls, playing sounds for when balls are caught 
+			  or escape the screen, and maintaining at least 15 frames per second. In order to increase the number of balls 
+			  we were able to animate, we minimized the amount of information updated on the TFT and utilized a DMA channel 
+			  in order to play sound with as little load on our main processor as possible.
+			  </p>
+			  <p><a href="https://youtu.be/9LfJ1mDPImA">Here</a> is a video of the game in action. Take a look at 
+			  the lab report <a href="documents/ECE4760Lab3Report.pdf">here.</a>
+			  </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">
+                <p>Fall 2018</p>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Double-Balanced RF Mixer</h3>
+              <div class="subheading mb-3">ECE 3150</div>
+              <p>I created a combination of two Clapp oscillators and a double-balanced RF mixer 
+              using breadboarded FETs and carefully chosen bias voltages. The two oscillators 
+              convert noise into AC signals through a high Q positive feedback loop. The mixer 
+              multiplies two differential signals together, generating a frequency modulated
+              signal. Note that we utilize current mirrors in order to increase the stability
+              of our circuitry, and that no additional low-pass filtering is required on the output.
+              Our circuit was able to reliably mix RF signals in the 100kHz to 10mHz range.
+              </p>
+              <p>For more detail, see <a href="documents/ECE3150FinalProjectReport.pdf">the final report.</a>
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Spring 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Snake Game</h3>
+              <div class="subheading mb-3">ECE 3140</div>
+              <p>This project, completed with a partner, implements the classic Nokia phone game SNAKE 
+              using the FRDM K64F board and an Adafruit LED matrix. Users can play the game SNAKE on a 
+              two-dimensional LED matrix. The snake moves forward approximately 10 times per second 
+              and in a forward direction unless the user dictates it to turn left or right. One food 
+              item is on the board at all times and the snake can eat the food and increase in length 
+              if it collides into it. The goal of this game is to get to the snake to the longest length 
+              possible without colliding into itself or the border of the board.
+              </p>
+			  <p>As I was working on this project, I also documented using I2C on the FRDM-K64F board, 
+			  as well as details on the specifics of the Adafruit IS31FL3731, which were 
+			  immediately utilized by my classmates.</p>
+
+              <p><a href="https://youtu.be/1BJK5f2GkNs">Here</a> is a video of the result, minus the final feature
+                of being able to select your speed. For a more in-depth documentation, 
+                check out <a href="documents/ECE3140FinalProjectConfluenceWriteup.pdf">this document</a>. Code can be found
+                <a href="https://github.com/mrong98/SNAKE">here.</a>
+                </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Spring 2018</span>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <hr class="m-0">
